@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <title>myFootball by Lindsay</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <title>{{ title }}</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                {% assets "css_all" %}
+                <link rel="stylesheet" href="{{ ASSET_URL }}">    
+                {% endassets %}
+        
+                {% assets "js_all" %}
+                <script src="{{ ASSET_URL }}"></script> 
+                {% endassets %}
+    </head>
+<body>
+    <div class="navbar">
+        <div>
+            <div class="dropdown">
+                <button type="button" class="btn btn-info">Premier League</button>
+                <div class="dropdown-content">
+                    <div class="nested-dropdown">
+                        <a href="#">Standings</a>
+                        <div class="nested-dropdown-content">
+                            {% for year in range(2023, 2010, -1) %}
+                            <a href="{{ url_for('get_standings', year=year, league=39) }}">{{ year }}-{{ year+1 }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <a href="#">Fixtures &amp; Results</a>
+                        <div class="nested-dropdown-content">
+                            {% for year in range(2023, 2010, -1) %}
+                            <a href="{{ url_for('get_league_fixtures', year=year, league=39) }}">{{ year }}-{{ year+1 }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <a href="#">Stats</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="btn btn-info">La Liga</button>
+                <div class="dropdown-content">
+                    <div class="nested-dropdown">
+                        <a href="#">Standings</a>
+                        <div class="nested-dropdown-content">
+                            {% for year in range(2023, 2010, -1) %}
+                            <a href="{{ url_for('get_standings', year=year, league=140) }}">{{ year }}-{{ year+1 }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <a href="#">Fixtures &amp; Results</a>
+                        <div class="nested-dropdown-content">
+                            {% for year in range(2023, 2010, -1) %}
+                            <a href="{{ url_for('get_league_fixtures', year=year, league=140) }}">{{ year }}-{{ year+1 }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <a href="#">Stats</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="btn btn-info">Serie A</button>
+                <div class="dropdown-content">
+                    <div class="nested-dropdown">
+                        <a href="#">Standings</a>
+                        <div class="nested-dropdown-content">
+                            {% for year in range(2023, 2010, -1) %}
+                            <a href="{{ url_for('get_standings', year=year, league=135) }}">{{ year }}-{{ year+1 }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <a href="#">Fixtures &amp; Results</a>
+                        <div class="nested-dropdown-content">
+                            {% for year in range(2023, 2010, -1) %}
+                            <a href="{{ url_for('get_league_fixtures', year=year, league=135) }}">{{ year }}-{{ year+1 }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <a href="#">Stats</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="btn btn-info">Ligue 1</button>
+                <div class="dropdown-content">
+                    <div class="nested-dropdown">
+                        <a href="#">Standings</a>
+                        <div class="nested-dropdown-content">
+                            {% for year in range(2023, 2010, -1) %}
+                            <a href="{{ url_for('get_standings', year=year, league=61) }}">{{ year }}-{{ year+1 }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <a href="#">Fixtures &amp; Results</a>
+                        <div class="nested-dropdown-content">
+                            {% for year in range(2023, 2010, -1) %}
+                            <a href="{{ url_for('get_league_fixtures', year=year, league=61) }}">{{ year }}-{{ year+1 }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <a href="#">Stats</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="btn btn-info">Bundesliga</button>
+                <div class="dropdown-content">
+                    <div class="nested-dropdown">
+                        <a href="#">Standings</a>
+                        <div class="nested-dropdown-content">
+                            {% for year in range(2023, 2010, -1) %}
+                            <a href="{{ url_for('get_standings', year=year, league=78) }}">{{ year }}-{{ year+1 }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <a href="#">Fixtures &amp; Results</a>
+                        <div class="nested-dropdown-content">
+                            {% for year in range(2023, 2010, -1) %}
+                            <a href="{{ url_for('get_league_fixtures', year=year, league=78) }}">{{ year }}-{{ year+1 }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <a href="#">Stats</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="btn btn-info">WA NPL</button>
+                <div class="dropdown-content">
+                    <div class="nested-dropdown">
+                        <a href="#">Standings</a>
+                        <div class="nested-dropdown-content">
+                            {% for year in range(2024, 2018, -1) %}
+                        <a href="{{ url_for('get_wa_npl',year=year) }}">{{ year }}</a>
+                    {% endfor %}
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <a href="#">Fixtures &amp; Results</a>
+                        <div class="nested-dropdown-content">
+                            {% for year in range(2024, 2018, -1) %}
+                            <a href="{{ url_for('get_league_fixtures', year=year, league=196) }}">{{ year }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <a href="#">Stats</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="btn btn-info">Other Leagues</button>
+                <div class="dropdown-content">
+                    <div class="nested-dropdown">
+                        <a href="#">Eridivisie</a>
+                        <div class="nested-dropdown-content">
+                            <div class="standings">
+                                <a>Standings</a>
+                                <div class="standings-dropdown">
+                                    {% for year in range(2023, 2010, -1) %}
+                                        <a href="{{ url_for('get_standings', year=year, league=88) }}">{{ year }}-{{ year+1 }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="fixtures">
+                                <a>Fixtures &amp; Results</a>
+                                <div class="fixtures-dropdown">
+                                    {% for year in range(2023, 2010, -1) %}
+                                        <a href="{{ url_for('get_league_fixtures', year=year, league=88) }}">{{ year }}-{{ year+1 }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <a href="#">Stats</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <a href="#">Brasileiro</a>
+                        <div class="nested-dropdown-content">
+                            <div class="standings">
+                                <a>Standings</a>
+                                <div class="standings-dropdown">
+                                    {% for year in range(2023, 2010, -1) %}
+                                        <a href="{{ url_for('get_standings', year=year, league=71) }}">{{ year }}-{{ year+1 }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="fixtures">
+                                <a>Fixtures &amp; Results</a>
+                                <div class="fixtures-dropdown">
+                                    {% for year in range(2023, 2010, -1) %}
+                                        <a href="{{ url_for('get_league_fixtures', year=year, league=71) }}">{{ year }}-{{ year+1 }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <a href="#">Stats</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <a href="#">Primeira Liga</a>
+                        <div class="nested-dropdown-content">
+                            <div class="standings">
+                                <a>Standings</a>
+                                <div class="standings-dropdown">
+                                    {% for year in range(2023, 2010, -1) %}
+                                        <a href="{{ url_for('get_standings', year=year, league=94) }}">{{ year }}-{{ year+1 }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="fixtures">
+                                <a>Fixtures &amp; Results</a>
+                                <div class="fixtures-dropdown">
+                                    {% for year in range(2023, 2010, -1) %}
+                                        <a href="{{ url_for('get_league_fixtures', year=year, league=94) }}">{{ year }}-{{ year+1 }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <a href="#">Stats</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <a href="#">Liga MX</a>
+                        <div class="nested-dropdown-content">
+                            <div class="standings">
+                                <a>Standings</a>
+                                <div class="standings-dropdown">
+                                    {% for year in range(2023, 2016, -1) %}
+                                        <a href="{{ url_for('get_standings', year=year, league=262) }}">{{ year }}-{{ year+1 }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="fixtures">
+                                <a>Fixtures &amp; Results</a>
+                                <div class="fixtures-dropdown">
+                                    {% for year in range(2023, 2016, -1) %}
+                                        <a href="{{ url_for('get_league_fixtures', year=year, league=262) }}">{{ year }}-{{ year+1 }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <a href="#">Stats</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <a href="#">Russian PL</a>
+                        <div class="nested-dropdown-content">
+                            <div class="standings">
+                                <a>Standings</a>
+                                <div class="standings-dropdown">
+                                    {% for year in range(2023, 2016, -1) %}
+                                        <a href="{{ url_for('get_standings', year=year, league=235) }}">{{ year }}-{{ year+1 }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="fixtures">
+                                <a>Fixtures &amp; Results</a>
+                                <div class="fixtures-dropdown">
+                                    {% for year in range(2023, 2016, -1) %}
+                                        <a href="{{ url_for('get_league_fixtures', year=year, league=235) }}">{{ year }}-{{ year+1 }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <a href="#">Stats</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <a href="#">English Championship</a>
+                        <div class="nested-dropdown-content">
+                            <div class="standings">
+                                <a>Standings</a>
+                                <div class="standings-dropdown">
+                                    {% for year in range(2023, 2011, -1) %}
+                                        <a href="{{ url_for('get_standings', year=year, league=40) }}">{{ year }}-{{ year+1 }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="fixtures">
+                                <a>Fixtures &amp; Results</a>
+                                <div class="fixtures-dropdown">
+                                    {% for year in range(2023, 2011, -1) %}
+                                        <a href="{{ url_for('get_league_fixtures', year=year, league=8840) }}">{{ year }}-{{ year+1 }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <a href="#">Stats</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1 class="navbar-brand">
+                <a href="{{ url_for('homepage') }}" style="text-decoration: none; color: inherit;">myFootball</a>
+            </h1>        
+        </div>
+        <!-- Add more navigation items if needed -->
+    </div>
+    {% block content%}
+    {% endblock %}
+</body>
+</html>
+

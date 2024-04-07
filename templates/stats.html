@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="stats-container">
+    <div class="team-stats">
+        <h3>{{ stats['response'][0]['team']['name'] }}</h3>
+        <img src="{{ stats['response'][0]['team']['logo'] }}" alt="{{ stats['response'][0]['team']['name'] }} Logo" class="team-logo">
+        {% for stat in stats['response'][0]['statistics'] %}
+            <div class="stat-item">{{ stat['type'] }}: {{ stat['value'] }}</div>
+        {% endfor %}
+    </div>
+    <div class="team-stats">
+        <h3>{{ stats['response'][1]['team']['name'] }}</h3>
+        <img src="{{ stats['response'][1]['team']['logo'] }}" alt="{{ stats['response'][1]['team']['name'] }} Logo" class="team-logo">
+        {% for stat in stats['response'][1]['statistics'] %}
+            <div class="stat-item">{{ stat['type'] }}: {{ stat['value'] }}</div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

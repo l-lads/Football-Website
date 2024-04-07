@@ -1,0 +1,247 @@
+.first-team-title {
+    background-color: rgb(183, 255, 177);
+    padding: 10px;
+    border-radius: 10px;
+    width: max-content;
+    float: left;
+}
+
+.reserves-team-title {
+    background-color: rgb(249, 249, 249);
+    padding: 10px;
+    border-radius: 10px;
+    width: max-content;
+    float: right;
+}
+
+.first-team {
+  background-color: rgb(249, 249, 249);
+  padding: 10px;
+  width: max-content;
+}
+
+.reserves-team {
+  background-color: rgb(183, 255, 177);
+  padding: 10px;
+  width: max-content;
+}
+
+.teams {
+  display: flex;
+  justify-content: space-between;
+}
+
+.create-player {
+
+}
+
+
+.fixture-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 3px solid #cfcfcf;
+    border-radius: 5px;
+    background-color: rgb(243, 243, 243);
+    height: 100px;
+}
+
+.fixture-details {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.fixture-score {
+    background-color: purple;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 0px 2px;
+}
+
+.fixture-main {
+    align-items: flex-start;
+    justify-content: center;
+    display: flex;
+}
+
+.fixture-team {
+    padding: 5px 0px;
+    margin: 0 2px;
+}
+
+.game-stats {
+    background-color: rgb(207, 207, 207);
+    border-radius: 5px;
+    border: #cfcfcf;
+    position: absolute;
+    display: flex;
+    padding: 6px;
+    margin-top: 40px;
+    right: 46.5%;
+}
+
+.game-stats:hover {
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: purple;
+    padding: 10px;
+    color: #f9f9f9;
+}
+
+.navbar-brand {
+    color: rgb(244, 244, 244);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.navbar-brand:hover {
+    color: rgb(137, 202, 255);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    color: #f9f9f9;
+}
+
+.dropdown button {
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    color:black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-content a:hover {
+    background-color: gray;
+}
+
+.btn.btn-info {
+    color: white; /* Set text color of .btn.btn-info class to white */
+}
+
+.dropdown .nested-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 160px;
+    background-color: #f9f9f9; /* Add your desired background color */
+}
+
+.dropdown .nested-dropdown-content .standings .standings-dropdown {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 160px;
+    background-color: #f9f9f9;
+}
+
+.dropdown .nested-dropdown-content .fixtures .fixtures-dropdown {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 160px;
+    background-color: #f9f9f9;
+}
+
+.dropdown-content .nested-dropdown-content {
+    left: 100%;
+    top: 0;
+}
+.table-container {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: #f2f2f2;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ccc; /* Faint grey line */
+    border-left: 1px solid #ccc;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+#points {
+    font-weight: 700; 
+    background-color: rgb(231, 231, 231);
+}
+
+tr:hover {
+    background-color: rgb(136, 255, 255);
+}
+
+img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-stats {
+    flex: 1;
+    text-align: center;
+}
+
+.team-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.stat-item {
+    margin-bottom: 10px;
+    border-radius: 2px;
+    border: 3px solid purple;
+    background-color: rgb(204, 204, 204);
+}

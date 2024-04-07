@@ -1,0 +1,50 @@
+.fixture-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 3px solid #cfcfcf;
+    border-radius: 5px;
+    background-color: rgb(243, 243, 243);
+    height: 100px;
+}
+
+.fixture-details {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.fixture-score {
+    background-color: purple;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 0px 2px;
+}
+
+.fixture-main {
+    align-items: flex-start;
+    justify-content: center;
+    display: flex;
+}
+
+.fixture-team {
+    padding: 5px 0px;
+    margin: 0 2px;
+}
+
+.game-stats {
+    background-color: rgb(207, 207, 207);
+    border-radius: 5px;
+    border: #cfcfcf;
+    position: absolute;
+    display: flex;
+    padding: 6px;
+    margin-top: 40px;
+    right: 46.5%;
+}
+
+.game-stats:hover {
+    cursor: pointer;
+}

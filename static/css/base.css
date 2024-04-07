@@ -1,0 +1,37 @@
+.first-team-title {
+    background-color: rgb(183, 255, 177);
+    padding: 10px;
+    border-radius: 10px;
+    width: max-content;
+    float: left;
+}
+
+.reserves-team-title {
+    background-color: rgb(249, 249, 249);
+    padding: 10px;
+    border-radius: 10px;
+    width: max-content;
+    float: right;
+}
+
+.first-team {
+  background-color: rgb(249, 249, 249);
+  padding: 10px;
+  width: max-content;
+}
+
+.reserves-team {
+  background-color: rgb(183, 255, 177);
+  padding: 10px;
+  width: max-content;
+}
+
+.teams {
+  display: flex;
+  justify-content: space-between;
+}
+
+.create-player {
+
+}
+

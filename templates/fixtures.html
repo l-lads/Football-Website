@@ -1,0 +1,45 @@
+{% extends "index.html" %}
+
+{% block content %}
+<style>
+    body {
+        background-image: url("{{ url_for('static', filename='images/' + image_path) }}");
+        background-color: rgb(255, 255, 255, 0.7); /* Black color with 0.3 opacity */
+        background-size: 70%;
+        background-blend-mode: overlay;
+        /* Add other styles as needed */
+    }
+</style>
+<div class="container">
+    {% set round = namespace(current_round='') %}
+    {% for fixture in fixtures['response'] %}
+        {% if round.current_round != fixture['league']['round'].rsplit(maxsplit=1)[-1] %}
+            {% set round.current_round = fixture['league']['round'].rsplit(maxsplit=1)[-1] %}
+            <h3>Gameweek {{ round.current_round }}</h3>
+        {% endif %}
+        <div class="fixture-container">
+            <span class="date-time" style="position: absolute; padding: 5px 0px;">{{ fixture['fixture']['date'] }}</span>
+            <div class="fixture-details">
+                <div class="fixture-main" style="float: right;">
+                    <span class="fixture-team">{{ fixture['teams']['home']['name'] }}</span>
+                    {% if fixture['score']['fulltime']['home'] is not none %}
+                    <div class="fixture-score">{{ fixture['score']['fulltime']['home'] }}</div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="fixture-details">
+                <div class="fixture-main" style="float: left;">
+                    {% if fixture['score']['fulltime']['away'] is not none %}
+                    <div class="fixture-score">{{ fixture['score']['fulltime']['away'] }}</div>
+                    {% endif %}
+                    <span class="fixture-team">{{ fixture['teams']['away']['name'] }}</span>
+                </div>
+            </div>
+            {{ fixture['fixture']['status']['short'] }}
+            <div class="game-stats">
+                <a href="{{ url_for('get_fixture_stats', fixture=fixture['fixture']['id']) }}">See Statistics &#8595;</a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,96 @@
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: purple;
+    padding: 10px;
+    color: #f9f9f9;
+}
+
+.navbar-brand {
+    color: rgb(244, 244, 244);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.navbar-brand:hover {
+    color: rgb(137, 202, 255);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    color: #f9f9f9;
+}
+
+.dropdown button {
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    color:black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-content a:hover {
+    background-color: gray;
+}
+
+.btn.btn-info {
+    color: white; /* Set text color of .btn.btn-info class to white */
+}
+
+.dropdown .nested-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 160px;
+    background-color: #f9f9f9; /* Add your desired background color */
+}
+
+.dropdown .nested-dropdown-content .standings .standings-dropdown {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 160px;
+    background-color: #f9f9f9;
+}
+
+.dropdown .nested-dropdown-content .fixtures .fixtures-dropdown {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 160px;
+    background-color: #f9f9f9;
+}
+
+.dropdown-content .nested-dropdown-content {
+    left: 100%;
+    top: 0;
+}

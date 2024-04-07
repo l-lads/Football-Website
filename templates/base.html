@@ -1,0 +1,43 @@
+{% extends "index.html" %}
+
+{% block content %}
+<style>
+    body {
+        background-image: url("{{ url_for('static', filename='images/' + image_path) }}");
+        background-color: rgb(255, 255, 255, 0.7); /* Black color with 0.3 opacity */
+        background-size: 70%;
+        background-blend-mode: overlay;
+        /* Add other styles as needed */
+    }
+</style>
+<div class="container" style="background-color: white;">
+    <div class="teams">
+        <div class="first-team-title">
+            First Team Lineup
+            <div class="first-team">
+                <p></p>
+            </div>
+        </div>
+        <div class="reserves-team-title">
+            Reserves Team Lineup
+            <div class="reserves-team">
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <div class="all-players">
+        {% for player in players %}
+        <p>{{ player.first_name }} {{ player.last_name }} - Times: {{ player.times }}</p>
+        {% endfor %}
+    </div>
+    <div class="create-player">
+        <form method="POST" action="{{ url_for('create_player') }}">
+            <label for="first_name">First Name:</label>
+            <input type="text" name="first_name" id="first_name" required>
+            <label for="last_name">Last Name:</label>
+            <input type="text" name="last_name" id="last_name" required>
+            <button type="submit">Add Player</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
